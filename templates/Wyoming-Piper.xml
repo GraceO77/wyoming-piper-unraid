@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Wyoming-Piper</Name>
+  <Repository>ghcr.io/graceo77/wyoming-piper-unraid:latest</Repository>
+  <Registry>https://github.com/GraceO77/wyoming-piper-unraid/pkgs/container/wyoming-piper-unraid</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/GraceO77/wyoming-piper-unraid/issues</Support>
+  <Project>https://github.com/GraceO77/wyoming-piper-unraid</Project>
+  <Overview>Local Wyoming Piper text-to-speech server for Home Assistant on Unraid. Version 1.0.0.</Overview>
+  <Category>HomeAutomation: Status:Stable</Category>
+  <TemplateURL>https://raw.githubusercontent.com/GraceO77/wyoming-piper-unraid/main/templates/Wyoming-Piper.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/home-assistant/addons/master/piper/icon.png</Icon>
+  <Config Name="Wyoming Port" Target="10200" Default="10200" Mode="tcp" Description="Wyoming protocol port used by Home Assistant." Type="Port" Display="always" Required="true" Mask="false">10200</Config>
+  <Config Name="Model Data" Target="/data" Default="/mnt/user/appdata/wyoming-piper/data" Mode="rw" Description="Persistent storage for Piper voices and cache." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/wyoming-piper/data</Config>
+  <Config Name="Voice" Target="PIPER_VOICE" Default="en_US-lessac-medium" Mode="" Description="Piper voice model, for example en_US-lessac-medium." Type="Variable" Display="always" Required="true" Mask="false">en_US-lessac-medium</Config>
+  <Config Name="Length Scale" Target="PIPER_LENGTH_SCALE" Default="" Mode="" Description="Optional speech speed control. Lower is faster; higher is slower." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+</Container>
