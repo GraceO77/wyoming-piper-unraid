@@ -35,11 +35,11 @@ jobs:
           build-args: |
             APP_VERSION=${{ steps.version.outputs.version }}
           tags: |
-            ghcr.io/${{ github.repository_owner }}/wyoming-piper-unraid:latest
-            ghcr.io/${{ github.repository_owner }}/wyoming-piper-unraid:${{ steps.version.outputs.version }}
-            ghcr.io/${{ github.repository_owner }}/wyoming-piper-unraid:${{ steps.version.outputs.major_minor }}
-            ghcr.io/${{ github.repository_owner }}/wyoming-piper-unraid:${{ steps.version.outputs.major }}
-            ghcr.io/${{ github.repository_owner }}/wyoming-piper-unraid:sha-${{ github.sha }}
+            ghcr.io/graceo77/wyoming-piper-unraid:latest
+            ghcr.io/graceo77/wyoming-piper-unraid:${{ steps.version.outputs.version }}
+            ghcr.io/graceo77/wyoming-piper-unraid:${{ steps.version.outputs.major_minor }}
+            ghcr.io/graceo77/wyoming-piper-unraid:${{ steps.version.outputs.major }}
+            ghcr.io/graceo77/wyoming-piper-unraid:sha-${{ github.sha }}
           labels: |
             org.opencontainers.image.source=https://github.com/${{ github.repository }}
             org.opencontainers.image.version=${{ steps.version.outputs.version }}
